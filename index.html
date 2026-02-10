@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Valentine 💘</title>
+<title>My Valentine 💛</title>
+
+<!-- Google Font (prevents mobile font changing) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -13,13 +16,20 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+
+  /* Minions background */
+  background-color: #fff3c4;
+  background-image: url("https://i.imgur.com/2yaf2wb.png");
+  background-size: 120px;
+  background-repeat: repeat;
+  background-position: center;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,11 +37,11 @@ body {
 }
 
 .container {
-  background: white;
-  width: 90%;
+  background: rgba(255, 255, 255, 0.95);
+  width: 92%;
   max-width: 380px;
-  padding: 30px 20px;
-  border-radius: 25px;
+  padding: 28px 20px;
+  border-radius: 24px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
   position: relative;
@@ -40,137 +50,15 @@ body {
 
 h1 {
   color: var(--pink);
-  font-size: 26px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 p {
   color: #555;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .buttons {
   margin-top: 25px;
   position: relative;
-  height: 80px;
-}
-
-button {
-  padding: 14px 26px;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  position: absolute;
-  transition: 0.2s ease;
-}
-
-#yesBtn {
-  background: var(--pink);
-  color: white;
-  left: 20px;
-}
-
-#noBtn {
-  background: #ddd;
-  right: 20px;
-}
-
-#yesBtn:hover {
-  transform: scale(1.1);
-}
-
-#loveLetter {
-  display: none;
-  margin-top: 20px;
-  background: var(--soft-pink);
-  padding: 20px;
-  border-radius: 15px;
-  font-size: 15px;
-  color: #444;
-}
-
-/* Floating Hearts */
-.heart {
-  position: absolute;
-  bottom: -20px;
-  font-size: 20px;
-  animation: floatUp 6s linear infinite;
-  opacity: 0.8;
-}
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-120vh) scale(1.5);
-    opacity: 0;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-  <h1>Will you be my Valentine? 💖</h1>
-  <p>From <strong>ur retard</strong> to <strong>Lib .-.</strong></p>
-
-  <div class="buttons">
-    <button id="yesBtn">Yes 💕</button>
-    <button id="noBtn">No 😢</button>
-  </div>
-
-  <div id="loveLetter">
-    <h2>My Love 💌</h2>
-    <p>
-      Ilove u so muchi i wann kic all over u and neva stop 
-      <br><br>
-      HAPPY VALENTINES DAY I HOPE U CHOSE YE BRU
-      <br><br>
-      Love,<br>
-      <strong>Uvi BUb</strong>
-    </p>
-  </div>
-</div>
-
-<script>
-const noBtn = document.getElementById("noBtn");
-const yesBtn = document.getElementById("yesBtn");
-const loveLetter = document.getElementById("loveLetter");
-
-noBtn.addEventListener("touchstart", moveNo);
-noBtn.addEventListener("mouseover", moveNo);
-
-function moveNo() {
-  const x = Math.random() * 200 - 100;
-  const y = Math.random() * 100 - 50;
-  noBtn.style.transform = `translate(${x}px, ${y}px)`;
-}
-
-yesBtn.addEventListener("click", () => {
-  loveLetter.style.display = "block";
-  yesBtn.style.display = "none";
-  noBtn.style.display = "none";
-});
-
-// Floating hearts generator
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "💖";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
-  document.body.appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 7000);
-}
-
-setInterval(createHeart, 400);
-</script>
-
-</body>
-</html>
