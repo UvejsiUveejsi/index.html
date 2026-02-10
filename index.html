@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Valentine 💛</title>
+<title>My Valentine 💖</title>
 
-<!-- Google Font (prevents mobile font changing) -->
+<!-- Stable mobile font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -22,18 +22,27 @@
 body {
   margin: 0;
   min-height: 100vh;
-
-  /* Minions background */
-  background-color: #fff3c4;
-  background-image: url("https://i.imgur.com/2yaf2wb.png");
-  background-size: 120px;
-  background-repeat: repeat;
-  background-position: center;
-
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
+}
+
+/* Small Minions square */
+.minions {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-image: url("https://www.clipartmax.com/middle/m2i8b1K9K9Z5d3A0_minions-funny-and-yellow-image-minions-cute/");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  opacity: 0.9;
+  top: 15%;
+  right: 10%;
+  z-index: 1;
 }
 
 .container {
@@ -51,7 +60,7 @@ body {
 h1 {
   color: var(--pink);
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 p {
@@ -100,7 +109,7 @@ button {
   color: #444;
 }
 
-/* Floating Hearts */
+/* Floating hearts */
 .heart {
   position: absolute;
   bottom: -20px;
@@ -124,11 +133,12 @@ button {
 
 <body>
 
+<!-- Minions sticker -->
+<div class="minions"></div>
+
 <div class="container">
   <h1>Will you be my Valentine? 💖</h1>
-
-  <!-- ✏️ CHANGE NAMES HERE -->
-  <p>From <strong>UVI</strong> to <strong>LIBI</strong></p>
+  <p>From <strong>YOUR_NAME</strong> to <strong>HER_NAME</strong></p>
 
   <div class="buttons">
     <button id="yesBtn">Yes 💕</button>
@@ -138,13 +148,13 @@ button {
   <div id="loveLetter">
     <h3>My Love 💌</h3>
     <p>
-      I LOVE U SOSO MMUCHI  BRU U MY MOST  MUNCHKIN MUNCHY  EVER BRU I LOVU  
+      You make my world brighter, my heart fuller,
+      and my smile way too obvious.
       <br><br>
-      I’d choose you in every universe,
-      every lifetime, happy Valentine’s Day. :3
+      I’m so grateful for you, today and always.
       <br><br>
-      Love always,<br>
-      <strong>BUUB</strong>
+      Love,<br>
+      <strong>YOUR_NAME</strong>
     </p>
   </div>
 </div>
